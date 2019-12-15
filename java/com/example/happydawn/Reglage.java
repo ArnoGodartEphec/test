@@ -1,5 +1,6 @@
 package com.example.happydawn;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
@@ -32,7 +33,10 @@ public class Reglage extends AppCompatActivity implements TimePickerDialog.OnTim
     private TextView textvolume;
     int volume;
     SeekBar seekbar;
-    private TextView mTextView;
+    public TextView mTextView;
+
+
+
 
 
     //augmentation
@@ -130,9 +134,10 @@ public class Reglage extends AppCompatActivity implements TimePickerDialog.OnTim
                 intent17.putExtra("edittext", str);
                 startActivity(intent17);
 
-
-
-
+                //heure (fonctionne pas)
+                TextView textViewHeure = findViewById(R.id.textView);
+                String stringHeure = textViewHeure.getText().toString();
+                intent17.putExtra("edittext1", stringHeure);
 
                 //son
                 TextView textview1 = findViewById(R.id.txtson);
@@ -398,24 +403,22 @@ public class Reglage extends AppCompatActivity implements TimePickerDialog.OnTim
         startAlarm(c);
     }
 
-    private void updateTimeText(Calendar c){
+    public void updateTimeText(Calendar c){
         String timeText = "Alarme mise pour: ";
-        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c);
+        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
 
         mTextView.setText(timeText);
     }
-
-
     private void startAlarm(Calendar c){
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(this, AlarmReceiver.class);
+        Intent intent = new Intent(this, Alarme.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0 );
 
         if(c.before(Calendar.getInstance())){
             c.add(Calendar.DATE, 1);
         }
 
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pending_intent );
+        alarmManager.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pending_intent );
 
     }
 

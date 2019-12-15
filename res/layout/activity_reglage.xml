@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="#6370A2"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/retour"
+            android:layout_width="98dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/fleche"/>
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Réglages"
+            android:textSize="@android:dimen/app_icon_size" />
+
+        <ImageView
+            android:id="@+id/valide"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/check"
+            android:layout_marginTop="10dp"
+            android:onClick="ValideActivity"
+            android:layout_marginLeft="1dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="510dp"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_timepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:text="Indiquer l'heure">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="480dp"
+            android:text="heure"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <Button
+        android:id="@+id/son"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6370A2"
+        android:text="Son"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="#FFFFFF"
+        android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/txtson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:textAlignment="center"
+            android:text="son"
+            android:textSize="30dp"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textVolume"
+            android:layout_width="180dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="100dp"
+            android:text="Volume : "
+            android:textColor="@android:color/background_dark"
+            android:textColorLink="#FFFFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textvolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="145dp"
+            android:textColor="@android:color/background_dark"
+            android:text="0"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/textpourcent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="185dp"
+            android:textColor="@android:color/background_dark"
+            android:text="%"
+            android:textSize="32sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="150dp"
+            tools:layout_editor_absoluteX="12dp"
+            android:progressTint="@android:color/background_dark"
+            android:thumbTint="@android:color/background_dark"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="540dp"
+            android:background="#6370A2"
+            android:text="Luminosite"
+            android:id="@+id/luminosite"
+            android:textColor="@android:color/background_dark"
+            android:textColorLink="#FFFFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/txtluminosite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            android:textAlignment="center"
+            android:text="luminosite"
+            android:textSize="30dp"
+            android:inputType="text" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="660dp"
+            android:background="#6370A2"
+            android:text="Couleurs"
+            android:id="@+id/couleurs"
+            android:textColor="@android:color/background_dark"
+            android:textColorLink="#FFFFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/txtcouleur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="720dp"
+            android:textAlignment="center"
+            android:text="couleur"
+            android:textSize="30dp"
+            android:inputType="text" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="780dp"
+            android:background="#6370A2"
+            android:text="Duree"
+            android:id="@+id/duree"
+            android:textColor="@android:color/background_dark"
+            android:textColorLink="#FFFFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/txtduree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="840dp"
+            android:textAlignment="center"
+            android:text="duree"
+            android:textSize="30dp"
+            android:inputType="text" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="900dp"
+            android:background="#6370A2"
+            android:text="Augmentation"
+            android:id="@+id/augmentation"
+            android:textColor="@android:color/background_dark"
+            android:textColorLink="#FFFFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/txtaugmentation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="960dp"
+            android:textAlignment="center"
+            android:text="augmentation"
+            android:textSize="30dp"
+            android:inputType="text" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1020dp"
+            android:background="#6370A2"
+            android:text="libelle"
+            android:id="@+id/libelle"
+            android:textColor="@android:color/background_dark"
+            android:textColorLink="#FFFFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/nomalarme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1080dp"
+            android:text="nom de l'alarme"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:inputType="text"
+            android:layout_marginBottom="10dp" />
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#6370A2"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1000000"
+            android:background="@drawable/happydawn1"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+
+</LinearLayout>

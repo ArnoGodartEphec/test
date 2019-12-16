@@ -137,7 +137,7 @@ public class Reglage extends AppCompatActivity implements TimePickerDialog.OnTim
                 //heure (fonctionne pas)
                 TextView textViewHeure = findViewById(R.id.textView);
                 String stringHeure = textViewHeure.getText().toString();
-                intent17.putExtra("edittext1", stringHeure);
+                intent17.putExtra("edittext10", stringHeure);
 
                 //son
                 TextView textview1 = findViewById(R.id.txtson);
@@ -404,7 +404,7 @@ public class Reglage extends AppCompatActivity implements TimePickerDialog.OnTim
     }
 
     public void updateTimeText(Calendar c){
-        String timeText = "Alarme mise pour: ";
+        String timeText = "";
         timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
 
         mTextView.setText(timeText);

@@ -85,8 +85,8 @@ public class Alarme extends AppCompatActivity {
             textView5.setText(str1);
             TextView textView6 = findViewById(R.id.txtupdate);
             textView6.setText(str);
-            TextView textView10 = findViewById(R.id.txtupdate1);
-            textView10.setText(str10);
+            TextView textView7 = findViewById(R.id.txtupdate1);
+            textView7.setText(str10);
         }
 
 
